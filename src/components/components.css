@@ -1,0 +1,60 @@
+.floating-label {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.floating-label input {
+    width: 95%;
+    padding: 1rem 0.75rem 0.5rem 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.floating-label input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px #93c5fd;
+}
+
+.floating-label label {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    color: #6b7280;
+    background: transparent;
+    padding: 0 0.4rem;
+    border-radius: 9999px;
+    pointer-events: none;
+    transition: 0.2s ease all;
+}
+
+.floating-label input:focus + label,
+.floating-label input:not(:placeholder-shown) + label {
+    top: 0;
+    transform: translateY(-50%);
+    font-size: 0.75rem;
+    color: #2563eb;
+    background-color: white;
+}
+
+.confirm-button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: #2563eb;
+    color: white;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.confirm-button:hover {
+    background-color: #1e40af;
+}
